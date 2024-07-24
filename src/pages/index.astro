@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { Image } from 'astro:assets';
 import portrait from '../assets/portrait.jpg';
+import { Icon } from 'astro-iconify'
 ---
 <!doctype html>
 <html lang="en">
@@ -46,31 +47,40 @@ import portrait from '../assets/portrait.jpg';
           Planet formation
         </p>
         <ul class="list-disc px-5">
-        <li><a href="https://doi.org/10.48550/arXiv.2403.17771" aria-label="Raorane et al." target="_blank">
-          Giant planet formation in the solar system</a></li>
+        <li> Giant planet formation in the solar system 
+          <a href="https://doi.org/10.48550/arXiv.2403.17771" aria-label="Raorane et al." target="_blank">
+          <Icon name="radix-icons:external-link" class="w-4 h-4 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/></a></li>
           <p class="text-slate-500 pb-2">A Raorane, R Brasser, S Matsumura, TCH Lau, MH Lee, A Bouvier (2024) in review</p>
           
-        <li><a href="https://doi.org/10.1051/0004-6361/202450464" aria-label="Lau et al. 2024b" target="_blank">
-          Sequential giant planet formation initiated by disc substructure</a> <a href="/animations">(Animation)</a> </h1> </li>
+        <li>Sequential giant planet formation initiated by disc substructure
+          <a href="https://doi.org/10.1051/0004-6361/202450464" aria-label="Lau et al. 2024b" target="_blank">
+            <Icon name="radix-icons:external-link" class="w-4 h-4 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/></a>
+            - Animation <a href="/animations"><Icon name="radix-icons:link-1" class="w-4 h-4 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/> </a> </h1> </li>
           <p class="text-slate-500 pb-2">TCH Lau, T Birnstiel, J Drążkowska, SM Stammler (2024) A&A</p>
 
-        <li><a href="https://doi.org/10.1051/0004-6361/202347863" aria-label="Lau et al. 2024a" target="_blank">
-          Can the giant planets of the Solar System form via pebble accretion in a smooth protoplanetary disc?</a></li>
+        <li>Can the giant planets of the Solar System form via pebble accretion in a smooth protoplanetary disc?
+          <a href="https://doi.org/10.1051/0004-6361/202347863" aria-label="Lau et al. 2024a" target="_blank">
+            <Icon name="radix-icons:external-link" class="w-4 h-4 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/></a></li>
           <p class="text-slate-500 pb-2">TCH Lau, MH Lee, R Brasser, S Matsumura (2024) A&A</p>
 
-        <li><a href="https://doi.org/10.1051/0004-6361/202244864" aria-label="Lau et al. 2022" target="_blank">
-          Rapid formation of massive planetary cores in a pressure bump</a></li>
+        <li>Rapid formation of massive planetary cores in a pressure bump
+          <a href="https://doi.org/10.1051/0004-6361/202244864" aria-label="Lau et al. 2022" target="_blank">
+            <Icon name="radix-icons:external-link" class="w-4 h-4 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/></a></li>
           <p class="text-slate-500 pb-2">TCH Lau, J Drążkowska, SM Stammler, T Birnstiel, CP Dullemon (2022) A&A</p>
         </ul>
 
         <p class="py-2">
-        N-body gravity
+        N-body code
         </p>
         <ul class="list-disc px-5">
-          <li><a href="https://doi.org/10.3847/2515-5172/accc8a" aria-label="Lau and Lee 2023" target="_blank">
-          Parallelization of the Symplectic Massive Body Algorithm (SyMBA) N-body Code</a>
-          <a href="https://github.com/tommylauch/SWIFT_SyMBAp_pub.git" aria-label="SyMBAp repo" target="_blank">
-            (github repo)</a></li>
+          <li>Parallelization of the Symplectic Massive Body Algorithm (SyMBA) N-body Code
+            <a href="https://doi.org/10.3847/2515-5172/accc8a" aria-label="Lau and Lee 2023" target="_blank">
+              <Icon name="radix-icons:external-link" class="w-4 h-4 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/></a>
+            <a href="https://github.com/tommylauch/SWIFT_SyMBAp_pub" aria-label="my Github repo" target="_blank">
+              <Icon name="radix-icons:github-logo" class="w-5 h-4 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/>
+            </a>
+          
+          </li>
         <p class="text-slate-500 pb-2">TCH Lau, MH Lee (2023) RNAAS</p>
         </ul>
         </div>

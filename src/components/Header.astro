@@ -11,21 +11,20 @@ import {
 } from "astro-navbar";
 ---
 
-<header class="flex px-4 pt-4 w-full justify-normal">
+<header class="flex px-4 py-4 w-full justify-normal">
   <Astronav>
     <div class="flex gap-5 justify-start">
       <a class="font-semibold text-l" href="/"> Home </a>
     </div>
 	<div class="flex gap-5 justify-end w-full">
 		<a href="mailto:ch.lau@physik.uni-muenchen.de" aria-label="my email" target="_blank">
-			<Icon name="radix-icons:envelope-closed" class="w-5 h-5 text-gray-600 hover:text-gray-500 dark:text-neutral-200"/>
+			<Icon name="radix-icons:envelope-closed" class="w-5 h-5 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/>
 		</a>
 		<a href="https://github.com/tommylauch" aria-label="my Github repo" target="_blank">
-			<Icon name="radix-icons:github-logo" class="w-5 h-5 text-gray-600 hover:text-gray-500 dark:text-neutral-200"/>
+			<Icon name="radix-icons:github-logo" class="w-5 h-5 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/>
 		</a>
 		<a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0001-7433-1177&sort=date+desc" aria-label="my ads record" target="_blank"> 
-			<Icon name="radix-icons:magnifying-glass" class="w-5 h-5 text-gray-600 hover:text-gray-500 dark:text-neutral-200"/>
-			<span>ads</span>
+			<Icon name="radix-icons:magnifying-glass" class="w-5 h-5 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/>ads
 		</a>
 	</div>
   </Astronav>
