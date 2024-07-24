@@ -20,7 +20,7 @@ import { Icon } from 'astro-iconify'
           <Image src={portrait} alt="" width="200" loading=eager />
         </div>
         <div class="column px-4 flex flex-col gap-4">
-          <h1 class="flex text-lg font-semibold md:text-2xl">Tommy Chi Ho Lau <a href="/name" class="text-xs">?</a> </h1> 
+          <h1 class="flex text-lg font-semibold md:text-2xl">Tommy Chi Ho Lau <a href="/name" class="text-xs" style="text-decoration : none">?</a> </h1> 
           <p class="flex text-base md:text-lg">
             Currently a Phd student in Til Birnstiel's group at LMU Munich
           </p>
@@ -47,23 +47,24 @@ import { Icon } from 'astro-iconify'
           Planet formation
         </p>
         <ul class="list-disc px-5">
-        <li> Giant planet formation in the solar system 
+        <li> <i>Giant planet formation in the solar system</i>
           <a href="https://doi.org/10.48550/arXiv.2403.17771" aria-label="Raorane et al." target="_blank">
           <Icon name="radix-icons:external-link" class="w-4 h-4 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/></a></li>
           <p class="text-slate-500 pb-2">A Raorane, R Brasser, S Matsumura, TCH Lau, MH Lee, A Bouvier (2024) in review</p>
           
-        <li>Sequential giant planet formation initiated by disc substructure
+        <li> <i>Sequential giant planet formation initiated by disc substructure</i>
           <a href="https://doi.org/10.1051/0004-6361/202450464" aria-label="Lau et al. 2024b" target="_blank">
             <Icon name="radix-icons:external-link" class="w-4 h-4 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/></a>
-            - Animation <a href="/animations"><Icon name="radix-icons:link-1" class="w-4 h-4 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/> </a> </h1> </li>
+            &mdash; Animations <a href="/animations" aria-label="animations">
+            <Icon name="radix-icons:link-1" class="w-4 h-4 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/> </a> </h1> </li>
           <p class="text-slate-500 pb-2">TCH Lau, T Birnstiel, J Drążkowska, SM Stammler (2024) A&A</p>
 
-        <li>Can the giant planets of the Solar System form via pebble accretion in a smooth protoplanetary disc?
+        <li> <i>Can the giant planets of the Solar System form via pebble accretion in a smooth protoplanetary disc?</i>
           <a href="https://doi.org/10.1051/0004-6361/202347863" aria-label="Lau et al. 2024a" target="_blank">
             <Icon name="radix-icons:external-link" class="w-4 h-4 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/></a></li>
           <p class="text-slate-500 pb-2">TCH Lau, MH Lee, R Brasser, S Matsumura (2024) A&A</p>
 
-        <li>Rapid formation of massive planetary cores in a pressure bump
+        <li> <i>Rapid formation of massive planetary cores in a pressure bump</i>
           <a href="https://doi.org/10.1051/0004-6361/202244864" aria-label="Lau et al. 2022" target="_blank">
             <Icon name="radix-icons:external-link" class="w-4 h-4 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/></a></li>
           <p class="text-slate-500 pb-2">TCH Lau, J Drążkowska, SM Stammler, T Birnstiel, CP Dullemon (2022) A&A</p>
@@ -73,7 +74,7 @@ import { Icon } from 'astro-iconify'
         N-body code
         </p>
         <ul class="list-disc px-5">
-          <li>Parallelization of the Symplectic Massive Body Algorithm (SyMBA) N-body Code
+          <li> <i>Parallelization of the Symplectic Massive Body Algorithm (SyMBA) N-body Code</i>
             <a href="https://doi.org/10.3847/2515-5172/accc8a" aria-label="Lau and Lee 2023" target="_blank">
               <Icon name="radix-icons:external-link" class="w-4 h-4 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/></a>
             <a href="https://github.com/tommylauch/SWIFT_SyMBAp_pub" aria-label="my Github repo" target="_blank">

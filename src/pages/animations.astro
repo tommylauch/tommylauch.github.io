@@ -13,22 +13,38 @@ import seq from '../assets/seq.gif';
   <body class="w-full max-w-screen-xl mx-auto px-10 dark:bg-neutral-800 dark:text-neutral-300 transition-colors duration-100">
   <Header />
   <main class="flex flex-col">
-        <p class="text-justify text-base md:text-lg font-semibold mt-4">Animation</p>
+        <p class="text-justify text-base md:text-lg font-semibold mt-4">Animations</p>
         <p class="text-xs mb-4 text-slate-500">Feel free to use the contents on this page along with a reference to the accompanied paper for your presentation.
         </p>
-
+        
         <p class="py-4">Sequential giant planet formation</p>
-          <div class="flex place-content-center">
-            <div class="lg:w-4/5 w-full">
-              <img src={seq.src} style="background-color:white" alt="Sequential giant planet formation" />
-            </div>
+
+        <div class="flex place-content-center">
+          <div class="lg:w-4/5 w-full">
+            <video controls>
+              <source src='/src/assets/seq_disc.mp4' type="video/mp4">
+            Video not supported
+            </video>
           </div>
-        <p class="flex-col text-center my-2">
+        </div>
+
+
+        <p class="flex-col text-center text-sm my-2 mb-10">
           Schematic animation showing a scenario of sequential planet formation in
           <a href="https://doi.org/10.1051/0004-6361/202450464" aria-label="Lau et al. 2024b" target="_blank">
-          Lau et al. (2024b)</a>
-          (13 MB)
+          Lau et al. (2024b)</a> (5.9 MB)
         </p>
+
+        <div class="flex place-content-center">
+          <div class="lg:w-4/5 w-full">
+            <img src={seq.src} style="background-color:white" alt="Sequential giant planet formation" />
+          </div>
+        </div>
+        <p class="flex-col text-center text-sm my-2 mb-10">
+          Simplified version of the schematic animation (13 MB)
+        </p>
+        
+
 	</main>
   <Footer />
   </body>
