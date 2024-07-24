@@ -1,0 +1,32 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="w-full max-w-screen-xl mx-auto px-10 dark:bg-neutral-800 dark:text-neutral-300 transition-colors duration-100">
+    <Header />
+    <main class="flex flex-col justify-center">
+         <div class="flex flex-col">
+            <p class="text-justify text-base md:text-lg font-semibold my-4">Name</p>
+                <p class="py-2">Tommy?</p>
+                <p class="flex-col text-justify text-base pb-2">
+                    In case you wonder, Hong Kongers often go by an English name and it is can be quite intimate to use their given names.
+                    So feel free to call me Tommy, unless there's a legal issues.
+                    If you're curious, here's a <a href="https://culturalatlas.sbs.com.au/hong-kong-culture/hong-kong-culture-naming#westernising-chinese-names" target="_blank">
+                        <u>page</u></a> by the Cultural Atlas on Names in Hong Kong.
+                </p>
+
+                <p class="py-2">Pronunciation</p>
+                <p>Chi with /iː/, Ho with /ou/, Lau with /aʊ/</p>
+                <p>If you insist (in Jyutping): 劉 lau4 智 zi3 昊 hou6</p>
+        </div>
+	</main>
+    <Footer />
+  </body>
+</html>

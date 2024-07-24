@@ -1,5 +1,5 @@
 html {
-    font-family: 'Reddit Mono', monospace;
+    font-family: 'Courier New', monospace;
     width: 100%;
 }
 
@@ -16,4 +16,27 @@ img {
     @apply rounded-lg;
     max-width: 100%;
     height: auto;
+}
+
+a span {
+    position: relative;
+    display: inline-block;
+    top: -50%;
+    left: 75%;
+}
+
+.row {
+    display: flex;
+  }
+  
+.column {
+   float: left;
+}
+  
+.left {
+    width: 30%;
+}
+  
+.right {
+    width: 70%;
 }

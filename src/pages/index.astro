@@ -3,43 +3,79 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import RecentPublications from "../components/RecentPublications.astro";
+import { Image } from 'astro:assets';
+import portrait from '../assets/portrait.jpg';
 ---
-
 <!doctype html>
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="w-full max-w-screen-md mx-auto my-4 dark:bg-neutral-800 dark:text-neutral-300 transition-colors duration-300" >
+  <body class="w-full max-w-screen-xl mx-auto px-10 dark:bg-neutral-800 dark:text-neutral-300 transition-colors duration-100">
     <Header />
     <main class="flex flex-col justify-center">
-      <div class="px-4 md:px-16 flex flex-col gap-4 md:my-10">
-        <h1 class="text-2xl md:text-5xl w-full">🧑‍🚀 Hello, Astronaut!</h1>
-        <p class="w-full text-justify text-base md:text-lg">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officia
-          neque eligendi nulla impedit error, consequuntur aspernatur autem id
-          pariatur tenetur quod.
+      <div class="row flex items-center">
+        <div class="column">
+          <Image src={portrait} alt="" width="200" loading=eager />
+        </div>
+        <div class="column px-4 flex flex-col gap-4">
+          <h1 class="flex text-lg font-semibold md:text-2xl">Tommy Chi Ho Lau <a href="/name" class="text-xs">?</a> </h1> 
+          <p class="flex text-justify text-base md:text-lg">
+            Currently a Phd student in Til Birnstiel's group at LMU Munich
+          </p>
+        </div>
+      </div>
+      <div class="my-2">
+       <p class="text-justify text-base md:text-lg font-semibold my-4">
+        How I started Astrophysics</p>
+        <p class="flex-col text-justify text-base ">
+          I did my undergrad at HKU with a double major in Physics and Geology, 
+          with a research project on orbital dynamics.
+          Then, I continued as an MPhil student working on planet formation model, 
+          with the Solar System in mind. Upon graduation, I moved to Munich and have been 
+          working on combining dust evolution in the disc with the model to capture the time 
+          and location of planetesimal formation.
         </p>
       </div>
-      <div class="w-full flex flex-col items-center gap-2.5 px-4 lg:px-0 mt-6">
-        <img
-          src="https://images.unsplash.com/photo-1635627408144-6bf36d28fb98"
-          alt="Astronaut"
-        />
-        <p class="italic text-xs text-gray-600 dark:text-neutral-400">
-          Foto de <a
-            href="https://unsplash.com/es/@niklasjonasson?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-            >Niklas Jonasson</a
-          > en <a
-            href="https://unsplash.com/es/fotos/un-cuerpo-de-agua-con-arboles-en-el-fondo-j_WW0u2yYAE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-            >Unsplash</a
-          >
+    
+      <div class="my-2">
+        <p class="text-justify text-base md:text-lg font-semibold my-4">
+          Research interests and publications</p>
+        <div>
+        <p class="py-2">
+          Planet formation
         </p>
+        <ul class="list-disc px-5">
+        <li><a href="https://doi.org/10.48550/arXiv.2403.17771" aria-label="Raorane et al." target="_blank">
+          Giant planet formation in the solar system</a></li>
+          <p class="text-slate-500 pb-2">A Raorane, R Brasser, S Matsumura, TCH Lau, MH Lee, A Bouvier (2024) in review</p>
+          
+        <li><a href="https://doi.org/10.1051/0004-6361/202450464" aria-label="Lau et al. 2024b" target="_blank">
+          Sequential giant planet formation initiated by disc substructure</a> <a href="/animations">(Animation)</a> </h1> </li>
+          <p class="text-slate-500 pb-2">TCH Lau, T Birnstiel, J Drążkowska, S Stammler (2024) A&A</p>
+
+        <li><a href="https://doi.org/10.1051/0004-6361/202347863" aria-label="Lau et al. 2024a" target="_blank">
+          Can the giant planets of the Solar System form via pebble accretion in a smooth protoplanetary disc?</a></li>
+          <p class="text-slate-500 pb-2">TCH Lau, MH Lee, R Brasser, S Matsumura (2024) A&A</p>
+
+        <li><a href="https://doi.org/10.1051/0004-6361/202244864" aria-label="Lau et al. 2022" target="_blank">
+          Rapid formation of massive planetary cores in a pressure bump</a></li>
+          <p class="text-slate-500 pb-2">TCH Lau, J Drążkowska, SM Stammler, T Birnstiel, CP Dullemon (2022) A&A</p>
+        </ul>
+
+        <p class="py-2">
+        N-body gravity
+        </p>
+        <ul class="list-disc px-5">
+          <li><a href="https://doi.org/10.3847/2515-5172/accc8a" aria-label="Lau and Lee 2023" target="_blank">
+          Parallelization of the Symplectic Massive Body Algorithm (SyMBA) N-body Code</a>
+          <a href="https://github.com/tommylauch/SWIFT_SyMBAp_pub.git" aria-label="SyMBAp repo" target="_blank">
+            (github repo)</a></li>
+        <p class="text-slate-500 pb-2">TCH Lau, MH Lee (2023) RNAAS</p>
+        </ul>
+        </div>
       </div>
-	  <RecentPublications />
-	      </main>
+	  </main>
     <Footer />
   </body>
 </html>
-
