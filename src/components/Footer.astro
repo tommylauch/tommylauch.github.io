@@ -1,6 +1,21 @@
 ---
 import ThemeIcon from "./ThemeIcon.astro";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
+import { getEntry } from "astro:content";
 
+const bio = await getEntry("about-me", "bio");
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
+
+const { remarkPluginFrontmatter } = await bio.render();
+
+const lastModified = dayjs(remarkPluginFrontmatter.lastModified)
+    .utc()
+    .tz("Asia/Hong_Kong")
+    .format("M/YYYY");
 ---
 
 <footer class="my-5 md:my-8">
@@ -12,7 +27,7 @@ import ThemeIcon from "./ThemeIcon.astro";
 
     <div style="display: flex; justify-content: flex-end">
     <p class="text-sm font-medium">
-    Last update: 7/2024
+    Last update: {lastModified}
     </p>
     </div>
 </footer>
