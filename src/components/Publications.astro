@@ -1,0 +1,42 @@
+---
+import Icon from 'astro-iconify';
+import {getEntry } from 'astro:content';
+const {data: bio} = await getEntry("about-me", "bio");
+---
+<div class="my-2">
+  <p class="text-base md:text-lg font-semibold my-4">
+    Research interests and publications</p>
+  <div>
+    {
+      bio.publications.map((category) => (
+        <div class="my-2">
+          <p class="text-base md:text-lg font-semibold my-4">
+            {category.name}
+          </p>
+          <ul class="list-disc px-5">
+            {
+              category.content.map((item) => (
+                <li>
+                  <i>{item.title}</i>
+                  <a href={item.url} aria-label={item.title} target="_blank">
+                    <Icon name="radix-icons:external-link" class="w-4 h-4 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/>
+                  </a>
+                  {
+                    item.otherUrls && item.otherUrls.map((url) => (
+                      <> - {url.name} 
+                      <a href={url.url} aria-label={url.name} target="_blank">
+                        <Icon name="radix-icons:external-link" class="w-4 h-4 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/>
+                      </a>
+                      </>
+                    ))
+                  }
+                  <p class="text-slate-500 pb-2">{item.cite}</p>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</div>
