@@ -7,10 +7,6 @@ export const aboutMeSchema = z.object({
         }),
         image: z.string(),
         summary: z.string(),
-        paragraphs: z.array(z.object({
-            title: z.string(),
-            body: z.string(),
-        })).optional().default([]),
         publications: z.array(z.object({
             name: z.string(),
             content: z.array(z.object({

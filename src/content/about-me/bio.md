@@ -4,10 +4,6 @@ name:
     url: /name
 image: /src/assets/portrait.jpg
 summary: Currently a Phd student in Til Birnstiel's group at LMU Munich
-paragraphs: 
-    -
-        title: How I started Astrophysics
-        body: I did my undergrad at HKU with a double major in Physics and Geology, with a research project on orbital dynamics. Then, I continued as an MPhil student working on planet formation model, with the Solar System in mind. Upon graduation, I moved to Munich and have been working on combining dust evolution in the disc with the model to capture the time and location of planetesimal formation.
 publications:
     -
         name: Planet formation
