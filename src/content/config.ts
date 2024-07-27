@@ -6,7 +6,7 @@ export const collections = {
     type: 'content',
     schema: aboutMeSchema
   }),
-  'name': defineCollection({
+  'page': defineCollection({
     type: 'content',
   }),
 }
