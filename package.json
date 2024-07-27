@@ -20,6 +20,7 @@
     "astro-iconify": "^1.2.0",
     "astro-navbar": "^2.3.2",
     "clsx": "^2.1.1",
+    "dayjs": "^1.11.12",
     "pnpm": "^9.6.0",
     "sharp": "^0.33.4",
     "tailwind-merge": "^2.3.0",
