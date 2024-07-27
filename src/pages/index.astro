@@ -2,10 +2,11 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Publications from '../components/Publications.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { Image } from 'astro:assets';
-import portrait from '../assets/portrait.jpg';
-import { Icon } from 'astro-iconify'
+import { getEntry } from 'astro:content';
+const { data: bio } = await getEntry("about-me", "bio");
 ---
 <!doctype html>
 <html lang="en">
@@ -17,76 +18,30 @@ import { Icon } from 'astro-iconify'
     <main class="flex flex-col justify-center">
       <div class="row flex items-center">
         <div class="column">
-          <Image src={portrait} alt="" width="200" loading=eager />
+          <Image src={bio.image} alt="" width="200" height="200" loading=eager />
         </div>
         <div class="column px-4 flex flex-col gap-4">
-          <h1 class="flex text-lg font-semibold md:text-2xl">Tommy Chi Ho Lau
-            <a href="/name" class="text-xs" style="text-decoration : none">?</a> </h1> 
+          <h1 class="flex text-lg font-semibold md:text-2xl">{`${bio.name.name}`} 
+            {bio.name.url && <a href={bio.name.url} class="text-xs" style="text-decoration : none">?</a>} </h1>
           <p class="flex text-base md:text-lg">
-            Currently a Phd student in Til Birnstiel's group at LMU Munich
+            {bio.summary}
           </p>
         </div>
       </div>
-      <div class="my-2">
-       <p class="ttext-base md:text-lg font-semibold my-4">
-        How I started Astrophysics</p>
-        <p class="flex-col text-justify text-base ">
-          I did my undergrad at HKU with a double major in Physics and Geology, 
-          with a research project on orbital dynamics.
-          Then, I continued as an MPhil student working on planet formation model, 
-          with the Solar System in mind. Upon graduation, I moved to Munich and have been 
-          working on combining dust evolution in the disc with the model to capture the time 
-          and location of planetesimal formation.
-        </p>
-      </div>
+      {
+        bio.paragraphs.map((paragraph) => (
+          <div class="my-2">
+            <p class="text-base md:text-lg font-semibold my-4">
+              {paragraph.title}
+            </p>
+            <p class="flex-col text-justify text-base">
+              {paragraph.body}
+            </p>
+          </div>
+        ))
+      }
     
-      <div class="my-2">
-        <p class="text-base md:text-lg font-semibold my-4">
-          Research interests and publications</p>
-        <div>
-        <p class="py-2">
-          Planet formation
-        </p>
-        <ul class="list-disc px-5">
-        <li> <i>Giant planet formation in the solar system</i>
-          <a href="https://doi.org/10.48550/arXiv.2403.17771" aria-label="Raorane et al." target="_blank">
-          <Icon name="radix-icons:external-link" class="w-4 h-4 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/></a></li>
-          <p class="text-slate-500 pb-2">A Raorane, R Brasser, S Matsumura, TCH Lau, MH Lee, A Bouvier (accepted) Icarus </p>
-          
-        <li> <i>Sequential giant planet formation initiated by disc substructure</i>
-          <a href="https://doi.org/10.1051/0004-6361/202450464" aria-label="Lau et al. 2024b" target="_blank">
-            <Icon name="radix-icons:external-link" class="w-4 h-4 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/></a>
-            &mdash; Animations <a href="/animations" aria-label="animations">
-            <Icon name="radix-icons:link-1" class="w-4 h-4 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/> </a> </h1> </li>
-          <p class="text-slate-500 pb-2">TCH Lau, T Birnstiel, J Drążkowska, SM Stammler (2024) A&A</p>
-
-        <li> <i>Can the giant planets of the Solar System form via pebble accretion in a smooth protoplanetary disc?</i>
-          <a href="https://doi.org/10.1051/0004-6361/202347863" aria-label="Lau et al. 2024a" target="_blank">
-            <Icon name="radix-icons:external-link" class="w-4 h-4 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/></a></li>
-          <p class="text-slate-500 pb-2">TCH Lau, MH Lee, R Brasser, S Matsumura (2024) A&A</p>
-
-        <li> <i>Rapid formation of massive planetary cores in a pressure bump</i>
-          <a href="https://doi.org/10.1051/0004-6361/202244864" aria-label="Lau et al. 2022" target="_blank">
-            <Icon name="radix-icons:external-link" class="w-4 h-4 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/></a></li>
-          <p class="text-slate-500 pb-2">TCH Lau, J Drążkowska, SM Stammler, T Birnstiel, CP Dullemon (2022) A&A</p>
-        </ul>
-
-        <p class="py-2">
-        N-body code
-        </p>
-        <ul class="list-disc px-5">
-          <li> <i>Parallelization of the Symplectic Massive Body Algorithm (SyMBA) N-body Code</i>
-            <a href="https://doi.org/10.3847/2515-5172/accc8a" aria-label="Lau and Lee 2023" target="_blank">
-              <Icon name="radix-icons:external-link" class="w-4 h-4 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/></a>
-            <a href="https://github.com/tommylauch/SWIFT_SyMBAp_pub" aria-label="my Github repo" target="_blank">
-              <Icon name="radix-icons:github-logo" class="w-5 h-4 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/>
-            </a>
-          
-          </li>
-        <p class="text-slate-500 pb-2">TCH Lau, MH Lee (2023) RNAAS</p>
-        </ul>
-        </div>
-      </div>
+      <Publications />
 	  </main>
     <Footer />
   </body>
