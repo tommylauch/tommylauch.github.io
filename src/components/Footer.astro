@@ -9,19 +9,20 @@ dayjs.extend(utc);
 dayjs.extend(timezone);
 
 interface Props {
-    entry: { render(): Render[".md"] }
+    entry?: { render(): Render[".md"] }
 }
-
+let lastModified;
 const { entry } = Astro.props;
-const { remarkPluginFrontmatter } = await entry.render();
-
-const lastModified = dayjs(remarkPluginFrontmatter.lastModified)
-    .utc()
-    .tz("Asia/Hong_Kong")
-    .format("HH:mm:ss, DD MMMM YYYY");
+if (entry) {
+    const { remarkPluginFrontmatter } = await entry.render();
+    lastModified = dayjs(remarkPluginFrontmatter.lastModified)
+        .utc()
+        .tz("Asia/Hong_Kong")
+        .format("HH:mm:ss, DD MMMM YYYY");
+}
 ---
 
-<footer class="my-5 md:my-8">
+<footer class="my-5 md:my-8 h-10">
 	<div class="flex border-b my-2 md:my-5"></div>
 	
 	<ul class="flex-col">
@@ -30,7 +31,7 @@ const lastModified = dayjs(remarkPluginFrontmatter.lastModified)
 
     <div style="display: flex; justify-content: flex-end">
     <p class="text-sm font-medium">
-    Last update: {lastModified}
+    {lastModified && `Last update: ${lastModified}`}
     </p>
     </div>
 </footer>
