@@ -6,9 +6,12 @@ import Publications from '../components/Publications.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { Image } from 'astro:assets';
 import { getEntry } from 'astro:content';
+
 const entry = await getEntry("about-me", "bio");
 const { data : bio } = entry;
 const { Content } = await entry.render();
+
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}');
 ---
 <!doctype html>
 <html lang="en">
@@ -20,7 +23,7 @@ const { Content } = await entry.render();
     <main class="flex flex-col justify-center">
       <div class="row flex items-center">
         <div class="column">
-          <Image src={bio.image} alt="" width="200" height="200" loading=eager />
+          <Image src={images[bio.image]()} alt="" width="200" height="200" loading=eager />
         </div>
         <div class="column px-4 flex flex-col gap-4">
           <h1 class="flex text-lg font-semibold md:text-2xl">{`${bio.name.name}`} 
