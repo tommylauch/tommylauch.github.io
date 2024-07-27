@@ -5,5 +5,8 @@ export const collections = {
   'about-me': defineCollection({
     type: 'content',
     schema: aboutMeSchema
-}),
-};
+  }),
+  'name': defineCollection({
+    type: 'content',
+  }),
+}

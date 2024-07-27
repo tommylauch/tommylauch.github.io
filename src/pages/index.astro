@@ -6,7 +6,9 @@ import Publications from '../components/Publications.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { Image } from 'astro:assets';
 import { getEntry } from 'astro:content';
-const { data: bio } = await getEntry("about-me", "bio");
+const entry = await getEntry("about-me", "bio");
+const { data : bio } = entry;
+const { Content } = await entry.render();
 ---
 <!doctype html>
 <html lang="en">
@@ -28,21 +30,12 @@ const { data: bio } = await getEntry("about-me", "bio");
           </p>
         </div>
       </div>
-      {
-        bio.paragraphs.map((paragraph) => (
-          <div class="my-2">
-            <p class="text-base md:text-lg font-semibold my-4">
-              {paragraph.title}
-            </p>
-            <p class="flex-col text-justify text-base">
-              {paragraph.body}
-            </p>
-          </div>
-        ))
-      }
+      <div class="my-2 mt-4">
+        <Content />
+      </div>
     
       <Publications />
 	  </main>
-    <Footer />
+    <Footer entry={entry} />
   </body>
 </html>

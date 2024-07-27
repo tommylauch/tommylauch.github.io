@@ -3,19 +3,22 @@ import ThemeIcon from "./ThemeIcon.astro";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
-import { getEntry } from "astro:content";
-
-const bio = await getEntry("about-me", "bio");
+import type { Render } from "astro:content";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
-const { remarkPluginFrontmatter } = await bio.render();
+interface Props {
+    entry: { render(): Render[".md"] }
+}
+
+const { entry } = Astro.props;
+const { remarkPluginFrontmatter } = await entry.render();
 
 const lastModified = dayjs(remarkPluginFrontmatter.lastModified)
     .utc()
     .tz("Asia/Hong_Kong")
-    .format("M/YYYY");
+    .format("HH:mm:ss, DD MMMM YYYY");
 ---
 
 <footer class="my-5 md:my-8">
