@@ -1,13 +1,10 @@
 ---
-import { Icon } from 'astro-iconify'
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import { getEntry } from 'astro:content';
 
-const entry = await getEntry("name", "name");
-const { Content } = await entry.render();
+const { entry } = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
@@ -18,9 +15,9 @@ const { Content } = await entry.render();
     <Header />
     <main class="flex flex-col justify-center">
          <div class="flex flex-col">
-            <p class="text-justify text-base md:text-lg font-semibold my-4">Name</p>
+            <p class="text-justify text-base md:text-lg font-semibold my-4">{entry.slug}</p>
             <p class="leading-8">
-                <Content />
+                <slot />
             </p>
         </div>
 	</main>
