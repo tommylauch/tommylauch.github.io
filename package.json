@@ -2,7 +2,6 @@
   "name": "void-astro",
   "type": "module",
   "version": "0.0.1",
-  "packageManager": "^pnpm@9.6.0",
   "scripts": {
     "dev": "astro dev --host",
     "start": "astro dev",
