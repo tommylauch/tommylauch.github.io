@@ -36,6 +36,6 @@ publications:
                 url: https://doi.org/10.3847/2515-5172/accc8a
                 cite: TCH Lau, MH Lee (2023) RNAAS
 ---
-### **How I started Astrophysics**
+### How I started Astrophysics
 
 I did my undergrad at HKU with a double major in Physics and Geology, with a research project on orbital dynamics. Then, I continued as an MPhil student working on planet formation model, with the Solar System in mind. Upon graduation, I moved to Munich and have been working on combining dust evolution in the disc with the model to capture the time and location of planetesimal formation.

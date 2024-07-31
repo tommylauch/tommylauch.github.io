@@ -4,13 +4,13 @@ import {getEntry } from 'astro:content';
 const {data: bio} = await getEntry("about-me", "bio");
 ---
 <div class="my-2">
-  <h2 class="text-base md:text-lg font-semibold my-4">
+  <h2 class="text-base md:text-lg font-semibold my-2">
     Research interests and publications</h2>
   <div>
     {
       bio.publications.map((category) => (
         <div class="my-2">
-          <p class="text-base md:text-lg font-semibold my-4">
+          <p class="text-base md:text-lg">
             {category.name}
           </p>
           <ul class="list-disc px-5">
