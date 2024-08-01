@@ -10,8 +10,8 @@ publications:
         content: 
             -
                 title: Giant planet formation in the solar system 
-                url: https://doi.org/10.48550/arXiv.2403.17771
-                cite: A Raorane, R Brasser, S Matsumura, TCH Lau, MH Lee, A Bouvier (accepted) Icarus
+                url: https://doi.org/10.1016/j.icarus.2024.116231
+                cite: A Raorane, R Brasser, S Matsumura, TCH Lau, MH Lee, A Bouvier (2024) Icarus
             -
                 title: Sequential giant planet formation initiated by disc substructure
                 url: https://doi.org/10.1051/0004-6361/202450464
@@ -20,6 +20,9 @@ publications:
                     - 
                         name: Animations
                         url: /animations
+                    - 
+                        name: Press release
+                        url: https://www.lmu.de/en/newsroom/news-overview/news/astrophysics-key-to-rapid-planet-formation.html
             -
                 title: Can the giant planets of the Solar System form via pebble accretion in a smooth protoplanetary disc?
                 url: https://doi.org/10.1051/0004-6361/202347863
@@ -35,6 +38,10 @@ publications:
                 title: Parallelization of the Symplectic Massive Body Algorithm (SyMBA) N-body Code
                 url: https://doi.org/10.3847/2515-5172/accc8a
                 cite: TCH Lau, MH Lee (2023) RNAAS
+                otherUrls: 
+                    - 
+                        name: GitHub repo
+                        url: https://github.com/tommylauch/SWIFT_SyMBAp_pub.git
 ---
 ### How I started Astrophysics
 
