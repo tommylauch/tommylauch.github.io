@@ -1,6 +1,8 @@
 ### Tommy?
 
-In case you wonder, Hong Kongers often go by an English name and it can be quite intimate to use their given names. So feel free to call me Tommy, unless there are legal issues. If you're curious, here's a page  by the Cultural Atlas on names in Hong Kong.
+In case you wonder, Hong Kongers often go by an English name and it can be quite intimate to use their given names. So feel free to call me Tommy, unless there are legal issues. If you're curious, here's a 
+<a href="https://culturalatlas.sbs.com.au/hong-kong-culture/hong-kong-culture-naming" aria-label="Cultural Atlas" target="_blank">page</a>
+by the Cultural Atlas on names in Hong Kong.
 
 ### Pronunciation
 
