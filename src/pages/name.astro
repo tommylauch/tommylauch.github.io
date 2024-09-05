@@ -1,0 +1,38 @@
+---
+import Icon from 'astro-iconify';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="w-full max-w-screen-xl mx-auto px-10 dark:bg-neutral-800 dark:text-neutral-300 transition-colors duration-100">
+  <Header />
+  <main class="flex flex-col">
+        <p class="text-justify text-lg md:text-2xl font-semibold mt-4">Name</p>
+
+        <p class="text-base md:text-lg font-semibold my-2">Tommy?</p>
+        <p class="text-justify">
+          In case you wonder, Hong Kongers often go by an English name and it can be quite intimate to use their given names.
+          So feel free to call me Tommy, unless there are legal issues. If you're curious, here's a page
+          <a href="https://culturalatlas.sbs.com.au/hong-kong-culture/hong-kong-culture-naming" aria-label="Cultural Atlas" target="_blank">
+            <Icon name="radix-icons:external-link" class="w-4 h-4 text-gray-600 hover:text-gray-500 dark:text-neutral-200 inline"/>
+          </a>
+          by the Cultural Atlas on names in Hong Kong.
+        </p>
+
+        <p class="text-base md:text-lg font-semibold my-2">Pronunciation</p>
+
+        <p class="text-justify">
+          Chi with /iː/, Ho with /ou/, Lau with /aʊ/
+          If you insist (in Jyutping): 劉 lau4 智 zi3 昊 hou6
+        </p>
+	</main>
+  <Footer />
+  </body>
+</html>
+

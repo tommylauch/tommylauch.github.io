@@ -3,25 +3,17 @@ html {
     width: 100%;
 }
 
-h1 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-h2 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-h3 {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+@layer base {
+  h1 {
+    @apply text-base md:text-lg font-semibold my-2;
+  }
+  h2 {
+    @apply text-base md:text-lg my-2;
+  }
 }
 
 p {

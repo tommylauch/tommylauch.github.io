@@ -26,7 +26,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg
           <Image src={images[bio.image]()} alt="" width="200" height="200" loading=eager />
         </div>
         <div class="column px-4 flex flex-col gap-4">
-          <h1 class="flex text-lg font-semibold md:text-2xl">{`${bio.name.name}`} 
+          <h1 class="flex text-lg md:text-2xl font-semibold">{`${bio.name.name}`} 
             {bio.name.url && <a href={bio.name.url} class="text-xs" style="text-decoration : none">?</a>} </h1>
           <p class="flex text-base md:text-lg">
             {bio.summary}
@@ -36,7 +36,6 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg
       <div class="my-2 mt-4 text-base">
         <Content />
       </div>
-    
       <Publications />
 	  </main>
     <Footer entry={entry} />

@@ -17,6 +17,10 @@ export const aboutMeSchema = z.object({
                     name: z.string(),
                     url: z.string(),
                 })).optional().default([]),
+                selfUrls: z.array(z.object({
+                    name: z.string(),
+                    url: z.string(),
+                })).optional().default([]),
         })).optional().default([]),
     })).optional().default([]),
 })

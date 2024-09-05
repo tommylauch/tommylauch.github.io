@@ -18,11 +18,12 @@ publications:
                 cite: TCH Lau, T Birnstiel, J Drążkowska, SM Stammler (2024) A&A
                 otherUrls: 
                     - 
-                        name: Animations
-                        url: /animations
-                    - 
                         name: Press release
                         url: https://www.lmu.de/en/newsroom/news-overview/news/astrophysics-key-to-rapid-planet-formation.html
+                selfUrls: 
+                    - 
+                        name: Animations
+                        url: /animations
             -
                 title: Can the giant planets of the Solar System form via pebble accretion in a smooth protoplanetary disc?
                 url: https://doi.org/10.1051/0004-6361/202347863
@@ -43,6 +44,6 @@ publications:
                         name: GitHub repo
                         url: https://github.com/tommylauch/SWIFT_SyMBAp_pub.git
 ---
-### How I started Astrophysics
+# How I started astrophysics
 
 I did my undergrad at HKU with a double major in Physics and Geology, with a research project on orbital dynamics. Then, I continued as an MPhil student working on planet formation model, with the Solar System in mind. Upon graduation, I moved to Munich and have been working on combining dust evolution in the disc with the model to capture the time and location of planetesimal formation.
