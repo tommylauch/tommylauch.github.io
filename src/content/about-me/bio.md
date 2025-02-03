@@ -9,7 +9,11 @@ publications:
         name: Planet formation
         content: 
             -
-                title: Giant planet formation in the solar system 
+                title: Planetesimal formation in a pressure bump induced by infall
+                url: https://doi.org/10.48550/arXiv.2501.17857
+                cite: H Zhao, TCH Lau, T Birnstiel, SM Stammler, J Drążkowska (accepted, 2025) A&A
+            -
+                title: Giant planet formation in the solar system
                 url: https://doi.org/10.1016/j.icarus.2024.116231
                 cite: A Raorane, R Brasser, S Matsumura, TCH Lau, MH Lee, A Bouvier (2024) Icarus
             -
