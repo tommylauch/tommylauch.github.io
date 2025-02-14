@@ -10,7 +10,7 @@ publications:
         content: 
             -
                 title: Planetesimal formation in a pressure bump induced by infall
-                url: https://doi.org/10.48550/arXiv.2501.17857
+                url: https://doi.org/10.1051/0004-6361/202452941
                 cite: H Zhao, TCH Lau, T Birnstiel, SM Stammler, J Drążkowska (accepted, 2025) A&A
             -
                 title: Giant planet formation in the solar system
